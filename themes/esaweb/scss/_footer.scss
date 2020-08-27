@@ -1,0 +1,165 @@
+/*===========================================*/
+footer {
+     background-color: $medium-black;
+     padding-top: 56px;
+     .col-md-4{
+         @media screen and (max-width: ($smscreen-size - 1)){
+            margin-bottom: 15px;
+         }
+     }
+     ul.esa-address{
+         padding-left: 0;
+         margin-top: 20px;
+         li{
+             padding-left: 0;
+             color: $white;
+             font-weight: 200;
+             font-size: 0.875rem;
+             line-height: 1.25rem;
+             margin-bottom: 14px;
+             span{
+                 &.fas{
+                     margin-right: 20px;
+                     font-size: 18px;
+                     
+                 }
+                 &.fa-phone{
+                   @include rotate($rotate_value: 90deg);    
+                }
+             }
+             a[href^="mailto:"] {
+                color: $lighter-blue;
+                text-transform: capitalize;
+             }
+             a{
+                color: $white;
+                font-weight: 200;
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                &:hover{
+                    color: $dark-blue;
+                    text-decoration: none;
+                }
+                
+             }
+         }
+     }
+     .top-footer{
+         figure{
+            margin: 0;
+            img{
+                display: block;
+                margin-bottom: 50px;
+                max-width: 100%;
+                height: auto;
+            }
+         }
+         
+        h3{
+            color: $white;
+            margin-bottom: 22px;
+        }
+        .menu-main-nav-container{
+            ul{
+               padding-left: 0;
+                li{
+                    a{
+                        color: $white;
+                        font-weight: 200;
+                        font-size: 0.875rem;
+                        line-height: 1.25rem;
+                        position: relative;
+                        display: block;
+                        border-bottom: 1px solid $gray-color;
+                        padding: 8px 0;
+                        text-transform: capitalize;
+                        &:hover{
+                            color: $dark-blue;
+                            text-decoration: none;
+                        }
+                        &::before{
+                            content: "\f105";
+                            font-family: $fontawesome-pro;
+                            font-weight: 100;
+                            margin-right: 9px;
+                            color: $gray-color;
+                        }
+                    }
+                }
+            }
+        }
+     }
+     
+     .bottom-footer{
+         padding-bottom: 25px;
+         @media screen and (min-width: $mdscreen-size){
+            margin-top: 120px;
+         }
+         
+             ul{
+                 padding-left: 0;
+                 li{
+                    color: $white;
+                    font-weight: 200;
+                    font-size: 0.875rem;
+                    line-height: 1.25rem;
+                    position: relative;
+                    display: block;
+                    text-transform: capitalize;
+                    @media screen and (max-width: ($smscreen-size - 1)){
+                        margin-bottom: 6px;
+                    }
+                    @media screen and (min-width: $mdscreen-size){
+                        display: inline-block;
+                    }
+                     a{
+                        color: $white;
+                        font-weight: 200;
+                        font-size: 0.875rem;
+                        line-height: 1.25rem;
+                        position: relative;
+                        display: block;
+                        text-transform: capitalize;
+                       
+                        &:hover{
+                            color: $dark-blue;
+                            text-decoration: none;
+                        }
+                     }
+                 }
+                 > li + li > a{
+                     @media screen and (min-width: $mdscreen-size){
+                        border-left: 1px solid $white;
+                        padding-left: 32px;
+                        margin-left: 20px;
+                     }
+                 }
+             }
+         
+     }
+     p{
+         color: $white;
+         font-size: 0.875rem;
+         line-height: 1.5rem;
+     }
+     ul.social-icons{
+         padding-left: 0;
+        a{
+            background-color: $grak-gray;
+            height: 30px;
+            width: 30px;
+            display: inline-block;
+            text-align: center;
+            padding: 5px;
+            @include border-radius($radius: 50%);
+            margin: 0 4px;
+            color: $medium-black;
+            span{
+                font-size: 16px;
+            }
+            &:hover{
+                background-color: $dark-blue;
+            }
+        }
+     }
+}

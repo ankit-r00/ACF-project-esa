@@ -1,0 +1,210 @@
+/*=================
+border mixins here
+==================*/
+
+@mixin border($direction, $width, $style, $color) {
+    border-#{$direction}: $width $style $color;
+}
+
+
+/*=========================
+border radius mixins here
+===========================*/
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+/*===========================
+transition delay mixins here
+============================*/
+
+@mixin transition($duration) {
+    -webkit-transition: $duration ease-in-out;
+    -moz-transition: $duration ease-in-out;
+    -ms-transition: $duration ease-in-out;
+    -o-transition: $duration ease-in-out;
+    transition: $duration ease-in-out;
+}
+
+@mixin scale($scale-value){
+    -webkit-transform: scale($scale-value);
+    -moz-transform: scale($scale-value);
+    -ms-transform: scale($scale-value);
+    -o-transform: scale($scale-value);
+    transform: scale($scale-value);
+}
+/*===========================
+image object fit css mixins here
+============================*/
+
+@mixin object-fit($object-value) {
+    -webkit-object-fit: $object-value;
+    -moz-object-fit: $object-value;
+    -ms-object-fit: $object-value;
+    -o-object-fit: $object-value;
+    object-fit: $object-value;
+}
+
+
+/*===========================
+box shadow css mixins here
+============================*/
+
+@mixin box-shadow($box-shadow) {
+    -webkit-box-shadow: $box-shadow;
+    -moz-box-shadow: $box-shadow;
+    -ms-box-shadow: $box-shadow;
+    -o-box-shadow: $box-shadow;
+    box-shadow: $box-shadow;
+}
+
+
+/*===========================
+flex box css mixins here
+============================*/
+
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+/*===========================
+justify content css mixins here
+============================*/
+
+@mixin justfy-content($justify-content) {
+    -webkit-justify-content: $justify-content;
+    -moz-justify-content: $justify-content;
+    -ms-justify-content: $justify-content;
+    -o-justify-content: $justify-content;
+    justify-content: $justify-content;
+}
+
+
+/*===========================
+flex box order css mixins here
+============================*/
+
+@mixin flex-order($block-order-value) {
+    -webkit-order: $block-order-value;
+    -moz-order: $block-order-value;
+    -ms-order: $block-order-value;
+    -o-order: $block-order-value;
+    order: $block-order-value;
+}
+
+
+/*===========================
+flex box direction css mixins here
+============================*/
+
+@mixin flex-direction($flex-box-direction) {
+    -webkit-flex-direction: $flex-box-direction;
+    -moz-flex-direction: $flex-box-direction;
+    -ms-flex-direction: $flex-box-direction;
+    -o-flex-direction: $flex-box-direction;
+    flex-direction: $flex-box-direction;
+}
+
+
+/*===========================
+flex box wrap css mixins here
+============================*/
+
+@mixin flex-wrap($flex-wrap) {
+    -webkit-flex-wrap: $flex-wrap;
+    -moz-flex-wrap: $flex-wrap;
+    -o-flex-wrap: $flex-wrap;
+    -ms-flex-wrap: $flex-wrap;
+    flex-wrap: $flex-wrap;
+}
+
+
+/*===========================
+align items  css mixins here
+============================*/
+
+@mixin align-items($align-value) {
+    -webkit-align-items: $align-value;
+    -moz-align-items: $align-value;
+    -ms-align-items: $align-value;
+    -o-align-items: $align-value;
+    align-items: $align-value;
+}
+
+
+/*===========================
+align self css mixins here
+============================*/
+
+@mixin align-self($align-self-value) {
+    -webkit-align-self: $align-self-value;
+    -moz-align-self: $align-self-value;
+    -ms-align-self: $align-self-value;
+    -o-align-self: $align-self-value;
+    align-self: $align-self-value;
+}
+
+
+/*===========================
+translate items css mixins here
+============================*/
+
+@mixin translate($x-value, $y-value) {
+    -webkit-transform: translate($x-value, $y-value);
+    -moz-transform: translate($x-value, $y-value);
+    -ms-transform: translate($x-value, $y-value);
+    -o-transform: translate($x-value, $y-value);
+    transform: translate($x-value, $y-value);
+}
+
+
+/*===========================
+rotate items css mixins here
+============================*/
+
+@mixin rotate($rotate_value) {
+    -webkit-transform: rotate($rotate_value);
+    -moz-transform: rotate($rotate_value);
+    -ms-transform: rotate($rotate_value);
+    -o-transform: rotate($rotate_value);
+    transform: rotate($rotate_value);
+}
+
+
+/*===========================
+  Column count mixins here
+=============================*/
+
+@mixin column-count($column-value) {
+    -webkit-column-count: $column-value;
+    -moz-column-count: $column-value;
+    -o-column-count: $column-value;
+    -ms-column-count: $column-value;
+    column-count: $column-value;
+}
+
+
+/*===========================
+  Column gap mixins here
+=============================*/
+
+@mixin column-gap($column-gap-value) {
+    -webkit-column-gap: $column-gap-value;
+    -moz-column-gap: $column-gap-value;
+    -ms-column-gap: $column-gap-value;
+    -o-column-gap: $column-gap-value;
+    column-gap: $column-gap-value;
+}
+
+

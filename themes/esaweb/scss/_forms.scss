@@ -1,0 +1,112 @@
+/*============ forms styling here ==================*/
+
+#ajaxsearchlite1,
+#ajaxsearchlite2{
+    input{
+        &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder {
+            color: $light-black !important;
+          }
+    }
+}
+#ajaxsearchlite2{
+  input[type="search"]::-webkit-input-placeholder{
+    color: $light-black !important;
+  }
+}
+/*======== Gravity Form styling here =========*/
+div{
+    &.gform_wrapper {
+        background-color: $lighter-gray;
+        padding: 15px;
+        ul{
+            li.gfield {
+                padding-right: 0 !important;
+                max-width: 100% !important;
+                input[type="text"] {
+                  height: 45px;
+                  border: 1px solid $light-black;
+                }
+                
+                textarea {
+                  border: 1px solid $light-black;
+                  &:focus {
+                    outline: none;
+                  }
+                }
+                input[type="text"]:focus, select:focus {
+                  outline: none;
+                }
+                select {
+                    height: 45px;
+                    -webkit-appearance: none;
+                    @include border-radius($radius: 0);
+                    padding: 10px;
+                    border: 1px solid $light-black;
+                  }
+                  .ginput_container_select {
+                    position: relative;
+                    &:after {
+                      pointer-events: none;
+                      position: absolute;
+                      content: "\f078";
+                      font-family: $fontawesome-pro;
+                      font-weight: 400;
+                      color: $light-black;
+                      font-size: 20px;
+                      line-height: 24px;
+                      right: 10px;
+                      top: 13px;
+                    }
+                  }
+                  &.gfield label.gfield_label {
+                    font-size: 1rem;
+                    line-height: 1.25rem;
+                    font-weight: 600;
+                    color: $light-black;
+                  }
+                  &.gfield_error {
+                    max-width: 100% !important;
+                    background-color: transparent !important;
+                    border: 0 !important;
+                    margin: 0 !important;
+                    padding: 0 !important;
+                  }
+              }
+        } 
+        .gform_footer{
+            input[type="submit"]{
+                color: $white;
+                background-color: $medium-green;
+                border: 3px solid $medium-green;
+                font-family: $open-sans-font;
+                font-size: .9375rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: $white;
+                text-align: center;
+                padding: 10px 12px;
+                white-space: normal;
+                &:hover {
+                    background-color: transparent;
+                    color: $light-black;
+                  }
+                &:focus{
+                    outline: none;
+                }
+            }
+            
+        } 
+        div.validation_error {
+            background-color: transparent !important;
+            border: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            font-weight: 500;
+          }
+      }
+}
+
+  

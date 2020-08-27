@@ -1,0 +1,206 @@
+/*======= category page styling here =======*/
+
+body {
+    &.category {
+        .inner-banner {
+            img {
+                width: 100%;
+                margin: 30px 0;
+            }
+        }
+    }
+    &.archive {
+        .tab-wrapper {
+            margin-bottom: 30px;
+        }
+        .events-section {
+            margin: 30px 0 !important;
+            padding-bottom: 30px !important;
+            background-color: $lighter-gray;
+        }
+    }
+}
+
+.sidebar {
+    .bsaProCarousel {
+        margin-bottom: 20px;
+    }
+}
+
+
+/*======== pagination styling here =========*/
+
+.page-numbers {
+    li {
+        a {
+            font-size: 1rem !important;
+        }
+    }
+    &.current {
+        font-size: 1rem !important;
+    }
+}
+
+.post-pagination {
+    .page-numbers {
+        text-align: center;
+        color: $medium-black;
+        li {
+            padding: 10px;
+            display: inline-block;
+            .current {
+                color: $lighter-blue;
+            }
+            a {
+                font-size: 1rem !important;
+            }
+        }
+    }
+    a.page-numbers:hover {
+        color: $lighter-blue;
+    }
+}
+
+.taxonomy-description {
+    background-color: $lighter-gray;
+    padding: 20px;
+    p {
+        font-size: 1.25rem;
+        line-height: 1.875rem;
+    }
+}
+
+.sidebar__blog {
+    &.widget_media_image {
+        background-color: $medium-black;
+        text-align: center;
+        padding: 15px;
+    }
+    &.widget_categories .sidebar__content {
+        background-color: $lighter-gray;
+        padding: 15px 20px 20px 20px;
+        margin-bottom: 20px;
+    }
+    &.widget_text .textwidget .panel-group {
+        padding: 15px;
+        background-color: $lighter-gray;
+        margin-bottom: 20px;
+        padding: 0;
+        border-bottom: 1px solid $shadow-color;
+        .panel-heading .panel-title a {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 22px;
+            color: $medium-black;
+        }
+        i.fa-folder-open {
+            margin-right: 8px;
+            color: $medium-black;
+        }
+        a {
+            color: $medium-black;
+            &:hover {
+                color: $lighter-blue;
+            }
+        }
+        .panel-heading .panel-title a:hover {
+            color: $lighter-blue;
+        }
+        ul {
+            margin-bottom: 8px;
+            padding-left: 30px;
+        }
+    }
+}
+
+.sidebar__content {
+    ul {
+        padding-left: 0;
+    }
+}
+
+.sidebar__blog {
+    &.widget_categories {
+        .sidebar__content {
+            .cat-item {
+                a {
+                    font-weight: 500;
+                    font-size: 0.9375rem;
+                    line-height: 1.375rem;
+                    color: $medium-black;
+                    display: block;
+                    margin-bottom: 7px;
+                    &:hover {
+                        text-decoration: none;
+                        color: $lighter-blue;
+                    }
+                }
+            }
+        }
+    }
+    &.widget_categories {
+        h2 {
+            &.sidebar__title {
+                color: $medium-black;
+                background-color: $lighter-gray;
+                margin: 0;
+                padding: 15px 0 0 15px;
+                font-size: 1.0625rem;
+                line-height: 1.375rem;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.tagcloud {
+    a {
+        &.tag-cloud-link {
+            font-size: 0.9375rem !important;
+            line-height: 1.375rem;
+            font-weight: 500;
+            border: 1px solid $shadow-color;
+            padding: 7px 19px;
+            margin-right: 8px;
+            @include border-radius($radius: 3px);
+            color: $medium-black;
+            &:hover {
+                text-decoration: none;
+                color: $white;
+                background-color: $lighter-blue;
+                border-color: $lighter-blue;
+            }
+        }
+    }
+}
+
+.content-blog {
+    .button {
+        margin-top: 20px;
+    }
+    a {
+        h2 {
+            font-size: 1.125rem;
+            line-height: 1.125rem;
+            font-weight: 800;
+            &.post__title:hover {
+                color: $lighter-blue;
+            }
+        }
+        &.btn-primary {
+            padding: 5px 7px;
+            border-radius: 3px;
+            font-size: 0.875rem;
+            line-height: 1.125rem;
+        }
+    }
+    .post-author {
+        h4,
+        h3 {
+            font-size: 0.9375rem;
+            text-transform: capitalize;
+            font-weight: 600;
+            color: $medium-black;
+        }
+    }
+}

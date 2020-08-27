@@ -1,0 +1,63 @@
+/*=========== buttons css here ============*/
+button, a{
+    &.btn{
+        font-family: $open-sans-font;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $white;
+        @include border-radius($radius: 6px);
+        background-color: $medium-green;
+        border: 3px solid $medium-green;
+        //min-width: 213px;
+        text-align: center;
+        padding: 10px;
+        white-space: normal;
+       
+    }
+    &.btn-primary{
+        color: $white;
+        background-color: $medium-green !important;
+        border: 3px solid $medium-green !important;
+         &:hover,
+         &:active,
+         &:focus{
+             background-color: $white !important;;
+             color:$light-black !important;
+             outline: 0;
+             box-shadow: none;
+         }
+    }
+}
+.larger-btn{
+    &.btn{
+        width: 100%;
+        height: 80px;
+        @include border-radius($radius: 0);
+        font-size: 1.625rem;
+        line-height: 1.875rem;
+        padding: 20px 10px;
+    }
+    .btn{
+        font-size: 30px;
+        line-height: 37px;
+        color: $white;
+        font-weight: 400;
+        strong{
+            font-weight: 900;
+            font-size: 30px;
+            line-height: 37px;
+            color: $white;
+            display: block;
+        }
+    }
+}
+.button-center{
+    text-align: center;
+}
+.btn-primary.small-btn {
+    font-size: 0.8125rem;
+    line-height: 1.0625rem;
+  }
+

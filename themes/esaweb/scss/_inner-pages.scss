@@ -1,0 +1,778 @@
+// Inner pages component styling Here
+.inner-wrapper {
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .advocacy-heading {
+        h1 {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: $black;
+            margin: 0;
+        }
+    }
+    .advocacy-column {
+        p {
+            line-height: 1.42857;
+            font-size: 12px;
+            color: $black;
+            font-weight: 600;
+            strong {
+                color: $black;
+            }
+        }
+        a {
+            line-height: 1.42857;
+            font-size: 12px;
+        }
+    }
+    figure {
+        margin: 0;
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 100%;
+        }
+    }
+    .image-block {
+        @media screen and (max-width: ($lgscreen-size - 1)) {
+            text-align: center;
+        }
+        figure {
+            img {
+                width: auto;
+                @media screen and (max-width: ($mdscreen-size - 1)) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        &.right {
+            @media screen and (min-width: $lgscreen-size) {
+                @include flex-order($block-order-value: 2);
+                text-align: right;
+            }
+        }
+    }
+    .small-icons {
+        img {
+            width: auto;
+        }
+    }
+    .medium-image {
+        figure {
+            img {
+                width: auto;
+                padding: 15px;
+            }
+        }
+    }
+    .post_content {
+        p {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+// Event section styling here
+.events-section {
+    padding: 30px;
+    .events-article {
+        padding: 15px 0;
+        border-bottom: 1px dashed $border-color;
+        width: 100%;
+        .event-wrapper {
+            display: table;
+            position: relative;
+            width: 100%;
+            &::before {
+                border-style: solid;
+                border-width: 15px;
+                border-left-color: $lighter-blue;
+                border-top-color: transparent;
+                border-right-color: transparent;
+                border-bottom-color: transparent;
+            }
+            &::after {
+                border-left: 1px dashed $white;
+            }
+            &::before,
+            &::after {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 100%;
+                content: "";
+                display: none;
+            }
+            &:hover {
+                background-color: $lighter-blue;
+                &::before,
+                &::after {
+                    display: block;
+                }
+                .event-time {
+                    background-color: $medium-blue;
+                    border-color: $medium-blue;
+                    span {
+                        color: $white;
+                    }
+                }
+                .event-content {
+                    h2,
+                    p,
+                    a {
+                        color: $white;
+                    }
+                }
+            }
+            .event-time {
+                border-right: 1px solid $border-color;
+                padding: 8px;
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+                @media screen and (min-width: $lgscreen-size) {
+                    width: 34%;
+                }
+                span {
+                    display: block;
+                    color: $light-black;
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        font-size: 1.625rem;
+                        line-height: 1.875rem;
+                    }
+                    &:nth-child(3) {
+                        font-size: 0.8125rem;
+                        line-height: 1.0625rem;
+                    }
+                }
+            }
+            .event-content {
+                padding: 12px 8px 8px 24px;
+                width: 100%;
+                h2 {
+                    font-size: 1.125rem;
+                    line-height: 1.375rem;
+                    a {
+                        font-size: 1.125rem;
+                        line-height: 1.375rem;
+                        letter-spacing: inherit;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
+                p {
+                    font-size: 14px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+    div.button {
+        padding: 33px 20px 10px;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+// Tabs styling here 
+.esa-tabs {
+    .tab {
+        margin-top: 20px;
+        button.tablinks {
+            margin-bottom: 9px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    &.horizontal {
+        button {
+            &.tablinks {
+                border: 1px solid $medium-blue;
+                padding: 16px;
+                background-color: $medium-blue;
+                color: $white;
+                font-size: 15px;
+                line-height: 19px;
+                &.active {
+                    border-top: 3px solid $medium-blue !important;
+                    color: $light-black;
+                    background-color: $white;
+                    box-shadow: none;
+                    outline: none;
+                    border-color: $medium-blue;
+                }
+            }
+        }
+    }
+    div.tabcontent {
+        padding: 20px;
+        margin-top: 7px;
+        border: 1px solid $border-color-100;
+        .panel-title {
+            i.fa-question-circle {
+                margin-right: 6px;
+            }
+        }
+    }
+}
+
+// Slider styling here 
+.esa-slider {
+    button {
+        &.slick-prev,
+        &.slick-next {
+            background-color: $medium-blue;
+            width: 35px;
+            height: 35px;
+            @include border-radius($radius: 5px);
+            @include flexbox();
+            @include justfy-content($justify-content: center);
+            &:before {
+                font-family: $fontawesome-pro;
+                color: $white;
+                opacity: 1;
+            }
+        }
+        &.slick-prev {
+            left: 0;
+            &::before {
+                content: "\f053";
+            }
+        }
+        &.slick-next {
+            right: 0;
+            &::before {
+                content: "\f054";
+            }
+        }
+    }
+    &.slick-initialized {
+        .slick-slide {
+            @include flexbox();
+            @include justfy-content($justify-content: center);
+            img {
+                width: auto;
+            }
+        }
+    }
+}
+
+
+/*================== Inner pages styling here ===============*/
+
+.beneficiaries_block {
+    .row {
+        margin-top: 30px;
+    }
+    .col-md-4 {
+        position: relative;
+        margin-bottom: 25px;
+        figcaption {
+            position: absolute;
+            top: 0;
+            padding: 50px 20px;
+            margin: 0 auto;
+            width: calc(100% - 30px);
+            right: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            font-weight: 600;
+            color: $white;
+            opacity: 0;
+            z-index: 2;
+            text-align: center;
+        }
+    }
+    figure {
+        overflow: hidden;
+        position: relative;
+        img {
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                background-color: $black;
+                opacity: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            &:hover {
+                &:before {
+                    opacity: 0.5;
+                }
+                ~figcaption {
+                    opacity: 1;
+                }
+                @include transition($duration: .3s);
+                @include scale($scale-value: 1.1);
+            }
+        }
+    }
+}
+
+.bio-white {
+    img {
+        margin-bottom: 20px;
+        width: 100%;
+        @include object-fit($object-value: cover);
+    }
+    a.btn {
+        width: 100%;
+    }
+}
+
+.larger-text {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    color: $light-black;
+    strong {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        color: $light-black;
+    }
+}
+
+.esa-req a.btn {
+    border-radius: 0px;
+    min-width: 104px;
+    margin: 0 31px 10px 0;
+}
+
+.esa-apply a.btn {
+    min-width: 239px;
+}
+
+.address-block {
+    h2 {
+        color: $light-black;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $light-black;
+        display: block;
+    }
+    h5 {
+        margin-bottom: 3px;
+    }
+    p {
+        margin-bottom: 18px;
+    }
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        color: $light-black;
+        font-weight: 600;
+        margin-top: 15px;
+    }
+}
+
+.margin-left-none {
+    margin-left: -15px;
+}
+
+.program-block {
+    @include justfy-content($justify-content: center);
+    justify-content: center;
+    .col-sm-3 {
+        background-color: $esa-blue;
+        color: $white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 15px;
+    }
+}
+
+ul {
+    &.default-list li {
+        font-size: 16px;
+        line-height: 27px;
+        color: $light-black;
+        margin-bottom: 7px;
+    }
+    &.square-list {
+        list-style: square outside;
+        li {
+            color: $light-black;
+            font-size: 16px;
+            line-height: 27px;
+            margin-bottom: 7px;
+            list-style: square outside;
+            a {
+                font-size: 16px;
+                line-height: 27px;
+                margin-bottom: 7px;
+                list-style: square outside;
+            }
+        }
+    }
+}
+
+.esa-accordion {
+    text-align: left;
+    .panel .panel-heading {
+        .panel-title {
+            margin-bottom: 0;
+        }
+        border-bottom: 1px solid $light-black;
+        font-size: 14px;
+        line-height: 20px;
+        a {
+            color: $light-black;
+            text-transform: capitalize;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 12px 10px 12px 0;
+            display: block;
+            &:hover,
+            &[aria-expanded="true"] {
+                text-decoration: none;
+                color: $lighter-blue;
+            }
+        }
+    }
+    .panel-body {
+        margin-top: 12px;
+        ul.square-list li {
+            margin-bottom: 3px;
+            padding-left: 18px;
+        }
+    }
+    .panel .panel-heading a {
+        &[aria-expanded="false"]:before {
+            content: "\f067";
+            font-family: $fontawesome-pro;
+            font-weight: 400;
+            color: $gray-100;
+            background-color: $bg-color-100;
+            margin-right: 9px;
+            padding: 4px;
+        }
+        &[aria-expanded="true"]:before {
+            content: "\f068";
+            font-family: $fontawesome-pro;
+            font-weight: 400;
+            margin-right: 9px;
+            padding: 4px;
+            background-color: $lighter-blue;
+            color: $white;
+        }
+        &:hover:before {
+            background-color: $lighter-blue;
+            color: $white;
+        }
+    }
+}
+
+@media screen and (min-width: $smscreen-size) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media screen and (min-width: $mdscreen-size) {
+    .container {
+        max-width: 800px;
+    }
+}
+
+@media screen and (min-width: $lgscreen-size) {
+    .container {
+        max-width: 960px;
+    }
+    .esa-apply {
+        border-left: 1px solid $light-black;
+        padding-left: 25px;
+    }
+}
+
+@media screen and (min-width: $xlscreen-size) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container {
+        max-width: 1300px;
+    }
+}
+
+
+/*========== Home Page styling =====*/
+
+.inner-wrapper .contain-image figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: ($lgscreen-size - 1)) {
+    .normal-content p>strong {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .esa-discover h1 {
+        font-size: 23px;
+        line-height: 30px;
+        strong {
+            font-size: 23px;
+            line-height: 30px;
+        }
+    }
+    .esa-about p,
+    .esa-discover p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    h2 {
+        font-size: 1.25rem;
+        line-height: 1.625rem;
+    }
+    .events-section {
+        .events-article {
+            .event-wrapper {
+                width: 100%;
+                .event-content {
+                    padding: 12px 8px 8px 12px;
+                    h2 {
+                        font-size: 0.875rem;
+                        line-height: 1.25rem;
+                        a {
+                            font-size: 0.875rem;
+                            line-height: 1.25rem;
+                        }
+                    }
+                }
+                .event-time span {
+                    &:nth-child(1),
+                    &:nth-child(2) {
+                        font-size: 1rem;
+                        line-height: 1.25rem;
+                    }
+                }
+            }
+        }
+        div.button {
+            padding: 25px 0 10px;
+        }
+    }
+    a.btn,
+    button.btn {
+        font-size: 0.875rem;
+        padding: 10px 7px;
+    }
+    .esa-news .post-content h2.post-title {
+        font-size: 14px;
+        line-height: 19px;
+        a {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+    header .bottom-header .navbar ul li a {
+        font-size: 12px;
+        line-height: 17px;
+    }
+    strong {
+        font-size: 12px;
+        line-height: 17px;
+        >a {
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+    ul {
+        a,
+        li {
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+    .white_content_all {
+        padding: 15px 15px 25px 15px !important;
+    }
+    #mc_embed_signup .mc-field-group input[type=email] {
+        width: 100%;
+    }
+    footer ul.esa-address li span.fas {
+        margin-right: 7px;
+    }
+    #mc_embed_signup .indicates-required {
+        margin-bottom: 10px;
+    }
+    .esa-events {
+        padding: 9px 0px 10px 7px !important;
+    }
+    h1 {
+        font-size: 1.4375rem;
+        line-height: 1.75rem;
+    }
+    .larger-text {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        color: $light-black;
+        strong {
+            font-size: 1.5rem;
+            line-height: 1.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            color: $light-black;
+        }
+    }
+}
+
+@media screen and (max-width: ($mdscreen-size - 1)) {
+    a.btn,
+    button.btn {
+        font-size: 0.8125rem;
+    }
+    .list_list.row {
+        margin-top: 18px;
+    }
+    .esa-questions .list_list ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .esa-tabs {
+        &.horizontal button.tablinks {
+            font-size: 12px;
+            line-height: 19px;
+            padding: 7px;
+        }
+        div.tabcontent img {
+            max-height: 260px;
+            width: auto;
+            margin-bottom: 15px;
+        }
+    }
+    .inner-wrapper figure img {
+        max-width: 100%;
+        height: auto;
+    }
+    .scholarship-block .col-sm-3 {
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+/*========== Events section styling here =============*/
+
+.events-section {
+    .events-article {
+        width: 100%;
+    }
+}
+
+.esa-mentor {
+    .col-sm-6 {
+        margin-bottom: 16px;
+    }
+    a {
+        color: $lighter-blue;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        span {
+            margin-top: 11px;
+            display: block;
+        }
+        i {
+            float: left;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            font-size: 24px;
+            color: $gray-300;
+            background: $gray-btn;
+            text-align: center;
+            margin-right: 10px;
+            @include border-radius($radius: 50%);
+            @include transition($duration: .2s);
+        }
+        &:hover {
+            i {
+                color: $white;
+                background-color: $lighter-blue;
+            }
+        }
+    }
+}
+
+.document-wrapper {
+    margin: 30px 0;
+    .container {
+        background-color: $lighter-gray;
+        padding: 0 20px 0 50px;
+    }
+}
+
+.docs {
+    width: 100%;
+    padding-bottom: 35px;
+    .card {
+        background-color: $lighter-gray;
+        border-bottom: none;
+        @include border-radius($radius: 0);
+        .card-body {
+            padding: 0;
+            ul {
+                margin-bottom: 0;
+            }
+            li {
+                padding: 10px 20px;
+            }
+        }
+    }
+    .card-body ul li {
+        color: $light-black;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        border-bottom: 1px solid $shadow-color;
+        padding-bottom: 10px;
+        padding-top: 15px;
+        .float-md-left {
+            h4 {
+                font-weight: 500;
+                font-size: 16px;
+            }
+            i {
+                margin-right: 10px;
+                font-size: 21px;
+            }
+        }
+        .float-md-right a {
+            margin: 0 4px;
+            font-weight: 700;
+        }
+    }
+}
+
+.documents {
+    padding: 20px 0;
+    li {
+        padding: 10px 0;
+    }
+}

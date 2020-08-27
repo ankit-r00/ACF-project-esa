@@ -1,0 +1,124 @@
+/*========= Homme Page Styling Here =============*/
+.banner-home{
+    .col-12{
+        padding: 0;
+    }
+    @media screen and (max-width: ($lgscreen-size - 1)){
+        .slider{
+            .slick-list{
+                .slick-track{
+                    .slider-content{
+                        figure{
+                            img{
+                                max-height: 800px;
+                                width: 100%;
+                                height: 100%;
+                                @include object-fit($object-value: cover);
+                                
+                            }
+                        } 
+                    } 
+                } 
+            } 
+            button.slick-prev,
+            button.slick-next,
+            ul.slick-dots{
+                display: none !important;
+            }
+        } 
+    }
+}
+.esa-questions{
+    h2{
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+        color: $light-black;
+        margin-bottom: 20px;
+        font-weight: 900;
+    }
+    .list_list{
+        ul{
+            margin-top: 20px;
+            li{
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+.esa-news{
+    .post-content{
+        span{
+            &.time{
+                font-size: 14px;
+                line-height: 18px;
+                font-style: italic;
+                color: $light-black;
+            }
+        }
+        h2.post-title{
+                font-size: 18px;
+                line-height: 22px;
+                font-weight: 900;
+            a{
+                font-size: 18px;
+                line-height: 22px;
+                font-weight: 900;
+                color: $light-black;
+                &:hover{
+                    color: $lighter-blue;
+                    text-decoration: none;
+                }
+            }
+        }
+        p{
+            font-size: 15px;
+            line-height: 24px;
+        }
+    }
+    h3{
+        padding-bottom: 10px;
+        color: $light-black;
+    }
+    figure{
+        overflow: hidden;
+        height: 278px;
+        margin-bottom: 24px !important;
+        img{
+            margin-bottom: 5px;
+            height: 100% !important;
+            @include transition($duration: .3s);
+            &:hover{
+                @include scale($scale-value: 1.1);
+                overflow: hidden;
+            }
+        }
+    }
+}
+.esa-discover{
+    h1{
+        font-size: 38px;
+        line-height: 42px;
+        font-weight: 300;
+        strong{
+            font-weight: 900;
+            font-size: 38px;
+            line-height: 42px;
+        }
+    }
+    p{
+        font-size: 21px;
+        line-height: 30px;
+    }
+}
+.esa-about{
+    p{
+        font-size: 21px;
+        line-height: 30px;
+        font-family: inherit;
+    }
+}
+.esa-events{
+    h5{
+        font-weight: 600;
+    }
+}

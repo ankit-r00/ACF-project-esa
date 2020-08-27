@@ -1,0 +1,38 @@
+/*================= navigation ===================*/
+
+.bottom-header {
+    .menu-main-nav-container {
+        ul.menu {
+            li {
+                .sub-menu {
+                    display: none;
+                }
+                span {
+                    float: right;
+                    cursor: pointer;
+                    position: absolute;
+                    right: 9px;
+                    top: 0;
+                    height: 40px;
+                    width: 50px;
+                    text-align: center;
+                    display: block;
+                    z-index: 999;
+                    color: $black;
+                    @include transition($duration: .3s);
+                    @include flexbox();
+                    @include align-items(center);
+                    @include justfy-content(center);
+                    &.rotate-angle {
+                        i {
+                            @include rotate($rotate_value: 90deg);
+                        }
+                    }
+                    i {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

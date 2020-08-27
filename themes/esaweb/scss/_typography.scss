@@ -1,0 +1,238 @@
+/*=========== All typography css here ===============*/
+
+
+html{
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-weight: $base-font-weight;
+    -webkit-font-smoothing: antialiased;
+    
+}
+h1{
+    font-size: $font-size-h1;
+    line-height: 1.875rem;
+    font-weight: 600;
+    color: $light-black;
+    font-family: $open-sans-font;
+    &.bold-text{
+        font-weight: 700;
+    }
+}
+
+h2{
+    font-size: $font-size-h2;
+    line-height: 1.75rem;
+    color: $lighter-blue;
+    font-weight: 600;
+    font-family: $open-sans-font;
+    
+}
+
+h3{
+        font-size: $font-size-h3;
+        line-height: 1.5rem;
+        font-weight: 600;
+        color: $blue-color;
+        font-family: $open-sans-font;
+        text-transform: inherit;
+        
+}
+
+h4,h5{
+    font-size: $font-size-h4;
+    line-height: 1.375rem;
+    font-family: $open-sans-font;
+    font-weight: 600;
+    color: $light-black;
+}
+
+
+h6{
+    font-size: $font-size-h6;
+    line-height: 1.125rem;
+    font-family: $open-sans-font;
+    font-weight: 400;
+    color: $light-black;
+    > a{
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+p{
+    font-size: 1rem;
+    line-height: 1.875rem;
+    font-family: $open-sans-font;
+    font-weight: 300;
+    color: $light-black;
+    letter-spacing: .3px;
+    &>a{
+        font-weight: 600;
+        word-break: break-word;
+        // text-decoration: underline;
+    }
+    &.tribe-events-promo{
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        a.vcard {
+          font-size: 14px;
+          line-height: 20px;
+          font-weight: 600;
+        }
+    }
+}
+
+a{
+    font-family: $open-sans-font;
+    font-size: 0.9375rem;
+    letter-spacing: inherit;
+    text-transform: capitalize;
+    font-weight: 400;
+    color: $lighter-blue;
+    @include transition($duration: .3s);
+    &:hover,
+    &:active,
+            {
+        color: $lighter-blue;
+        text-decoration: none;
+    }
+    &:focus{
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+    }
+}
+a[href^="mailto:"]{
+   text-transform: lowercase;
+    
+}
+strong,
+strong>a{
+    font-family: $open-sans-font;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+    letter-spacing: inherit;
+    color: $light-black;
+    @media screen and (min-width: $lgscreen-size){
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+    }
+}
+
+
+a[href^="mailto:"] {
+    text-transform: lowercase;
+    h1,h2,h3,h4,h5,h6,strong,em,b,span,p{
+        text-transform: lowercase;
+    }
+}
+
+ul{
+    li{
+        list-style-type: none;
+        font-family: $open-sans-font;
+        .fa{
+            color: $lighter-blue;
+        }
+    }
+    li,a{
+        font-size: 1rem;
+        line-height: 1.25rem;
+        color: $lighter-blue;
+        font-weight: 400;
+        font-family: $open-sans-font;
+        &:hover{
+            color: $medium-green;
+        }
+    }
+}
+ol{
+    li {
+        margin-bottom: 20px;
+        color: $light-black;
+        font-size: 1rem;
+        line-height: 1.6875rem;
+      }
+} 
+// extra classes
+.margin-none h1,
+.margin-none h2,
+.margin-none h3,
+.margin-none h4,
+.margin-none h5,
+.margin-none h6{
+    margin: 0;
+}
+.bold-text > *{
+    font-weight: 900;
+}
+.content-with-image{
+    img{
+        max-height: 184px;
+        width: auto;
+        @include object-fit($object-value: cover);
+        &.alignleft{
+            float: left;
+            margin-right: 22px;
+        }
+        &.alignright{
+            float: right;
+            margin-left: 22px;
+        }
+    }
+    a{
+        strong{
+            color: $lighter-blue; 
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+            font-weight: 900;
+        }
+    }
+    strong{
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        color: $light-black;
+        font-weight: 900;
+        a{
+            color: $lighter-blue;
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 900;
+        }
+    }
+}
+.add-image{
+    img{
+        max-width: 100%;
+        height: auto;
+        @include object-fit($object-value: contain);
+    }
+    
+}
+.adds-slider{
+    img{
+        width: 100%;
+    }
+}
+span,p{
+    &.medium-text{
+        font-size: 1.3125rem;
+        line-height: 1.5625rem;
+        font-weight: 500;
+    }
+}
